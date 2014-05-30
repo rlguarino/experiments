@@ -1,0 +1,18 @@
+<html>
+
+<h1>Welcome to Quote Wall</h1>
+
+<h3> 15 Most Recent Quotes </h3>
+<dl>
+{{range .}}
+<dt> {{.Text}} </dt>
+<dd>- {{.Name}} </dd>
+{{end}}
+</dl>
+
+<form action="/new/" method="POST">
+<div><textarea name="text" >New Quote</textarea></div>
+<div><textarea name="author">Author</textarea></div>
+<div><input type="submit" value="Post"></div>
+</form>
+</html>
